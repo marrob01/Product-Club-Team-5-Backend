@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "React",
+        "description": "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.",
+        "benefits": "Provides organization, ease in finding errors and creating solutions."
+    },
+    {
+        "id": 2,
+        "name": "JavaScript",
+        "description": "JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and so much more.",
+        "benefits": "You can create the frontend and the backend of an application or game for web or mobile that works in all browsers. It's an object oriented program, providing reuseability, maintainability, portability and extensibility of code."
+    },
+    {
+        "id": 3,
+        "name": "HTML",
+        "description": "HTML is the markup language that we use to structure and give meaning to our web content, for example defining paragraphs, headings, and data tables, or embedding images and videos in the page.",
+        "benefits": "It's supported by all browsers. It can intergrate with other programming languages. Provides structure."
+    },
+    {
+        "id": 4,
+        "name": "CSS",
+        "description": "Cascading Style Sheet is styling language that tells how HTML elements are to be displayed on screen, paper, or in other media. Ex. colors, size, animation...",
+        "benefits": "Provides user friendly designs, structure, sizing to fit all view sizes, can create animation and various visual effects."
+    },
+    {
+        "id": 5,
+        "name": "Three.js",
+        "description": "It's an opensource cross-browser JavaScript library application programming interface (API) used to create and display animate 3D computer graphics in the browser using WebGL.",
+        "benefits": "It simplifies WegGL, game making and web animation is easier, and with the GUI getting the best specs is simplified."
+    },
+    {
+        "id": 6,
+        "name": "SVG",
+        "description": "SVG stands for Scalable Vector Graphics · SVG is used to define vector-based graphics for the Web and defines the graphics in XML format.",
+        "benefits": "Images can be created and edited with any text editor, images can be searched, indexed, scripted, and compressed, images are scalable, images can be printed with high quality at any resolution and images are zoomable.  Working with CSS to design or animate the whole or parts of the image is made simplified."
+    },
+    {
+        "id": 7,
+        "name": "Python",
+        "description": "Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. It's often used to build websites and software, automate tasks, and conduct data analysis",
+        "benefits": "Python's clean object-oriented design provides enhanced process control, and the language is equipped with excellent text processing and integration capabilities, as well as its own unit testing framework, which makes it more efficient."
+    },
+    {
+        "id": 8,
+        "name": "Bootstrap",
+        "description": "Bootstrap is a potent front-end framework used to create modern websites and web apps. It's open-source and free to use, yet features numerous HTML and CSS templates for UI interface elements such as buttons and forms. Bootstrap also supports JavaScript extensions.",
+        "benefits": "Bootstrap is a HTML, CSS & JS Library that focuses on simplifying the development of informative web pages and made responsive. It's a front-end framework that comes with preset choices of color, size, font and layout to that project that can be altered."
+    },
+    {
+        "id": 9,
+        "name": "MongoDB",
+        "description": "MongoDB is an object-oriented, simple, dynamic, and scalable NoSQL database. It is based on the NoSQL document store model. The data objects are stored as separate documents inside a collection ",
+        "benefits": "You can store your records without worrying about the data structure such as the number of fields or types of fields to store values."
+    },
+    {
+        "id": 10,
+        "name": "NoSQL",
+        "description": "NoSQL is an approach to database design that enables the storage and querying of data outside the traditional structures found in relational databases.",
+        "benefits": "Scalability: A fundamental design goal of NoSQL solution is to store unstructured data over a distributed environment, where tables are large and stored separately across nodes. It also aims to provide “unlimited” data capacity for rapidly growing data."
+    },
+    {
+        "id": 11,
+        "name": "SQL",
+        "description": "SQL stands for Structured Query Language · SQL lets you access and manipulate databases.  A database is a table that consists of rows and columns. It facilitates retrieving specific information from databases that are further used for analysis.",
+        "benefits": "It supports distributed databases, offering users great flexibility. SQL allows users to access data stored in a relational database management system."
+    },
+    {
+        "id": 12,
+        "name": "GitHub",
+        "description": "GitHub is a Git repository hosting service. While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features, such as a wikis and basic task management tools for every project.",
+        "benefits": "It lets you and others work together on projects from anywhere, keep up to date on everyone's changes and prevents errors with controlled merging."
+    },
+    {
+        "id": 13,
+        "name": "Node.js",
+        "description": "Node enables you to use JavaScript server side. It is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.",
+        "benefits": "Gives the ability scale up quickly making it fast by using a simplified model of event-driven programming that uses callbacks to signal the completion of a task."
+    },
+    {
+        "id": 14,
+        "name": "Express",
+        "description": "Express is a back end web application framework for Node. js, and is a popular unopinionated web framework, written in JavaScript and hosted within the Node. js runtime environment. This module explains how to set up your development environment and how to perform common web development and deployment tasks",
+        "benefits": "It is designed for building web applications and APIs. It allows programmers to manage everything, from routes to handling requests and views fast and efficiently."
+    },
+    {
+        "id": 15,
+        "name": "Django",
+        "description": "Django is used for development of different types of websites, in particular, a highly customisable app, such as a social media website. Django is a free, open source, high-end framework written in the famously simple, flexible, and relatively easy-to-learn Python programming language",
+        "benefits": "It's a full-stack framework and includes all the necessary features by default instead of offering them as separate libraries"
+    },
+    {
+        "id": 16,
+        "name": "Java",
+        "description": "Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It can be used to create complete applications that may run on a single computer or be distributed among servers and clients in a network. It can also be used to build a small application module or applet (a simply designed, small application) for use as part of a Web page. The compiled code (known as bytecode) runs on most operating systems (OS), including Windows, Linux and Mac OS.",
+        "benefits": "Java is straightforward to use, write, compile, and debug."
+    }
+]
