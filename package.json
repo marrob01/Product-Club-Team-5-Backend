@@ -1,0 +1,28 @@
+{
+  "name": "Product-Club-Team-5-Backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marrob01/Product-Club-Team-5-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marrob01/Product-Club-Team-5-Backend/issues"
+  },
+  "homepage": "https://github.com/marrob01/Product-Club-Team-5-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.8",
+    "nodemon": "^2.0.13"
+  }
+}
