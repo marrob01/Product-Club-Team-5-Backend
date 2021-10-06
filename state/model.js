@@ -13,7 +13,7 @@ let stateSchema = new mongoose.Schema({
 	    awardType: String
     },
 
-    Direct_Payment: {
+    directPayment: {
         awardID: Number,
         startDate: Date,
         endDate: Date,

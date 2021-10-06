@@ -1,37 +1,37 @@
-let Skill = require("./model.js");
+let State = require("./model.js");
 
 let controller = {
     create(request, response) {
-        let skill = request.body
-        Skill
-            .create(skill)
-            .then(skill => response.json(skill))
+        let state = request.body
+        state
+            .create(state)
+            .then(state => response.json(state))
     },
 
     readById(request, response) {
         let id = request.params.id
-        Skills
+        states
             .findById(id)
-            .then(skills => response.json(skill))
+            .then(states => response.json(state))
     },
 
     readAll(request, response) {
-        Skill
+        state
             .find({})
-            .then(skills => response.json(skills))
+            .then(states => response.json(states))
     },
 
     update(request, response) {
-        let skill = JSON.parse(request.body)
+        let state = JSON.parse(request.body)
         let id = request.params.id
-        Skill
-            .findByIdAndUpdate(id, skill, { new: true })
-            .then(skill => response.json(skill))
+        state
+            .findByIdAndUpdate(id, state, { new: true })
+            .then(state => response.json(state))
     },
 
     delete(request, response) {
         let id = request.params.id
-        Skill
+        state
             .findByIdAndDelete(id)
             .then(() => response.json({ ok: true }))
     }
