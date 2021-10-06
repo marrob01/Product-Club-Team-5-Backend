@@ -1,22 +1,22 @@
-let State = require("./model.js");
+let stateModel = require("./model.js");
 
 let controller = {
     create(request, response) {
         let state = request.body
-        state
+        stateModel
             .create(state)
             .then(state => response.json(state))
     },
 
     readById(request, response) {
         let id = request.params.id
-        states
+       stateModel
             .findById(id)
-            .then(states => response.json(state))
+            .then(state => response.json(state))
     },
 
     readAll(request, response) {
-        state
+        stateModel
             .find({})
             .then(states => response.json(states))
     },
@@ -24,14 +24,14 @@ let controller = {
     update(request, response) {
         let state = JSON.parse(request.body)
         let id = request.params.id
-        state
+        stateModel
             .findByIdAndUpdate(id, state, { new: true })
             .then(state => response.json(state))
     },
 
     delete(request, response) {
         let id = request.params.id
-        state
+        stateModel
             .findByIdAndDelete(id)
             .then(() => response.json({ ok: true }))
     }
