@@ -23,7 +23,6 @@ let federalSchema = new mongoose.Schema({
         city: String,
         covidObligations: String,
         awardingAgency: String,
-	    awardingSubAgency: String,
         awardAmount: Number,
         awardType: String, 
     }
