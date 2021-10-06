@@ -1,6 +1,6 @@
 let mongoose = require("mongoose");
 
-let skillSchema = new mongoose.Schema({
+let federalSchema = new mongoose.Schema({
     grants: {
         awardId: Number,
         startDate: Date,
@@ -30,6 +30,6 @@ let skillSchema = new mongoose.Schema({
 
 })
 
-let Skill = mongoose.model("Card", skillSchema);
+let federal = mongoose.model("Card", federalSchema);
 
-module.exports = Skill
+module.exports = federal
