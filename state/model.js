@@ -26,6 +26,6 @@ let stateSchema = new mongoose.Schema({
     }
 })
 
-let State = mongoose.model("Card", stateSchema);
+let State = mongoose.model("state", stateSchema);
 
 module.exports = State
