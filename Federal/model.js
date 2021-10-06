@@ -29,6 +29,6 @@ let federalSchema = new mongoose.Schema({
 
 })
 
-let federal = mongoose.model("Card", federalSchema);
+let federal = mongoose.model("federal", federalSchema);
 
 module.exports = federal
