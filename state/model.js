@@ -1,4 +1,6 @@
 let mongoose = require("mongoose");
+const express = require('express');
+const router = express.Router();
 
 let stateSchema = new mongoose.Schema({
     Grant: {
@@ -27,6 +29,6 @@ let stateSchema = new mongoose.Schema({
     }
 })
 
-let State = mongoose.model("Card", stateSchema);
+let state = mongoose.model("state", stateSchema);
 
-module.exports = State
+module.exports = state

@@ -4,6 +4,8 @@ let cors = require("cors");
 const { application } = require("express");
 let app = express();
 
+app.use(express.urlencoded({extended: true}));
+
 app.use(express.json());
 app.use(cors());
 app.use(router);
