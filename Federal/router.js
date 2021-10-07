@@ -3,10 +3,10 @@ let router = new express.Router();
 
 let controller = require("./controller");
 
-router.get('/federal', controller.readAll);
-router.get('/federal/:id', controller.readById);
-router.post('/federal', controller.create);
-router.put('/federal/:id', controller.update);
-router.delete('/federal/:id', controller.delete);
+router.get('/', controller.readAll);
+router.get('/:id', controller.readById);
+router.post('/', controller.create);
+router.put('/:id', controller.update);
+router.delete('/:id', controller.delete);
 
 module.exports = router
