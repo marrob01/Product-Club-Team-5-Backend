@@ -1,11 +1,24 @@
 let stateModel = require("./model.js");
+const express = require('express');
+const router = express.Router();
+
+
 
 let controller = {
-    create(request, response) {
+    create(request, response, err) {
         let state = request.body
-        stateModel
-            .create(state)
-            .then(state => response.json(state))
+
+        if(response.status === 200 || 201){
+            stateModel
+                .create(state)
+                .then(state => response.json(state))
+            console.log("Added state info :-)" , state)
+        } else if(err){
+            console.log(`There was an error on: ${err}`)
+        }
+
+        
+       
     },
 
     readById(request, response) {
@@ -13,12 +26,14 @@ let controller = {
        stateModel
             .findById(id)
             .then(state => response.json(state))
+            console.log('is read by id')
     },
 
     readAll(request, response) {
         stateModel
             .find({})
             .then(states => response.json(states))
+            console.log('reading all')
     },
 
     update(request, response) {
@@ -27,6 +42,7 @@ let controller = {
         stateModel
             .findByIdAndUpdate(id, state, { new: true })
             .then(state => response.json(state))
+            console.log('is able to update state by id')
     },
 
     delete(request, response) {
@@ -34,6 +50,7 @@ let controller = {
         stateModel
             .findByIdAndDelete(id)
             .then(() => response.json({ ok: true }))
+            console.log('is able to delete')
     }
 }
 
