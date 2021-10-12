@@ -2,11 +2,12 @@ require("./database.js");
 let mongoose = require("mongoose");
 let stateModel = require("./state/model");
 let federalModel = require("./federal/model");
-let json = require("./data.json");
+let federalJson = require("./federal.json");
+let stateJson = require("./state.json")
 
 stateModel.deleteMany({})
     .then(() => {
-        stateModel.create(json)
+        stateModel.create(stateJson)
             .then(states => {
                 mongoose.disconnect()
             })
@@ -14,7 +15,7 @@ stateModel.deleteMany({})
 
 federalModel.deleteMany({})
     .then(() => {
-        federalModel.create(json)
+        federalModel.create(federalJson)
             .then(federal => {
                 mongoose.disconnect()
             })
