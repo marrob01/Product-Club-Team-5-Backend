@@ -1,9 +1,7 @@
 let mongoose = require("mongoose");
-const express = require('express');
-const router = express.Router();
 
 let stateSchema = new mongoose.Schema({
-    Grant: {
+    grant: {
         awardID: Number,
 	    startDate: Date,
 	    endDate: Date,
@@ -29,6 +27,6 @@ let stateSchema = new mongoose.Schema({
     }
 })
 
-let state = mongoose.model("state", stateSchema);
+let State = mongoose.model("state", stateSchema);
 
-module.exports = state
+module.exports = State

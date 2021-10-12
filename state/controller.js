@@ -26,12 +26,14 @@ let controller = {
        stateModel
             .findById(id)
             .then(state => response.json(state))
+            console.log('is read by id')
     },
 
     readAll(request, response) {
         stateModel
-            .find({})
-            .then(states => response.json(states))
+        .find({})
+        .then(states => response.json(states))
+        console.log("Added state info :-)")
     },
 
     update(request, response) {
@@ -40,6 +42,7 @@ let controller = {
         stateModel
             .findByIdAndUpdate(id, state, { new: true })
             .then(state => response.json(state))
+            console.log('is able to update state by id')
     },
 
     delete(request, response) {
@@ -47,6 +50,7 @@ let controller = {
         stateModel
             .findByIdAndDelete(id)
             .then(() => response.json({ ok: true }))
+            console.log('is able to delete')
     }
 }
 

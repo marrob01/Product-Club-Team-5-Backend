@@ -1,7 +1,8 @@
 let mongoose = require("mongoose");
 
+
 let federalSchema = new mongoose.Schema({
-    grants: {
+    grant: {
         awardId: Number,
         startDate: Date,
         endDate: Date,
@@ -13,7 +14,7 @@ let federalSchema = new mongoose.Schema({
         awardAmount: Number,
         awardType: String, 
     },
-    directPayments: {
+    directPayment: {
         awardId: Number,
         startDate: Date,
         endDate: Date,
@@ -29,6 +30,6 @@ let federalSchema = new mongoose.Schema({
 
 })
 
-let federal = mongoose.model("federal", federalSchema);
+let Federal = mongoose.model("federal", federalSchema);
 
-module.exports = federal
+module.exports = Federal
