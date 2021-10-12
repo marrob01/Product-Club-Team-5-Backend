@@ -2,8 +2,8 @@ require("./database.js");
 let mongoose = require("mongoose");
 let stateModel = require("./state/model");
 let federalModel = require("./federal/model");
-let federalJson = require("./federal.json");
-let stateJson = require("./state.json")
+let stateJson = require("./stateData.json");
+let federalJson = require("./federalData.json");
 
 stateModel.deleteMany({})
     .then(() => {
