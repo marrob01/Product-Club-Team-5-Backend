@@ -30,6 +30,6 @@ let federalSchema = new mongoose.Schema({
 
 })
 
-let federal = mongoose.model("federal", federalSchema);
+let Federal = mongoose.model("federal", federalSchema);
 
-module.exports = federal
+module.exports = Federal
