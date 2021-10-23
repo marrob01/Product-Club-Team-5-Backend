@@ -7,7 +7,7 @@ let data = require("./data.json");
 
 stateModel.deleteMany({})
     .then(() => {
-        stateModel.create(dataJson)
+        stateModel.create(data)
             .then(states => {
                 mongoose.disconnect()
             })
@@ -15,7 +15,7 @@ stateModel.deleteMany({})
 
 federalModel.deleteMany({})
     .then(() => {
-        federalModel.create(federalJson)
+        federalModel.create(data)
             .then(federal => {
                 mongoose.disconnect()
             })
