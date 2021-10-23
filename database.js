@@ -5,7 +5,7 @@ const db = mongoose.connection;
 
 db.on('error', (err)=> { console.log('ERROR: ', err)});
 db.on('connected', ()=> { console.log("mongo connected")})
-db.on('disconnected', ()=> { console.log("mongo disconnected")})
+db.on('disconnected', ()=> { console.log("mongo disconnected line 8")})
 
 
 
