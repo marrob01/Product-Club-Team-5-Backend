@@ -10,7 +10,7 @@ let stateSchema = new mongoose.Schema([
         State: String,
         County: String,
         Award_Fiscal_Year: Number,
-        Award_Funding: Number
+        Award_Funding: String
     }]
 )
 
