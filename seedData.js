@@ -9,7 +9,7 @@ stateModel.deleteMany({})
     .then(() => {
         stateModel.create(data)
             .then(states => {
-                mongoose.disconnect()
+                // mongoose.disconnect()
             })
     })
 
@@ -17,6 +17,6 @@ federalModel.deleteMany({})
     .then(() => {
         federalModel.create(data)
             .then(federal => {
-                mongoose.disconnect()
+                // mongoose.disconnect()
             })
     })

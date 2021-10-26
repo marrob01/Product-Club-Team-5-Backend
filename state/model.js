@@ -1,21 +1,19 @@
 let mongoose = require("mongoose");
 
-let stateSchema = new mongoose.Schema(
+let stateSchema = new mongoose.Schema([
     
     {    
-        Award_Id: String,
-	    Start_Date: Date,
-	    End_Date: Date,
-	    Recipient_Name: String,
-	    Country: String,
-	    City: String,
-	    Federal_Covid_19_Obligations: Number,
-	    Total_Award_Amount: Number,
-        cfda_title: String,
-        award_description: String,
-	    awardType: String
-    }
+        Grantee_Name: String,
+        Grant_Number: String,
+        Program_Name: String,
+        City: String,
+        State: String,
+        County: String,
+        Award_Fiscal_Year: Number,
+        Award_Funding: Number
+    }]
 )
+
 
 let State = mongoose.model("state", stateSchema);
 
