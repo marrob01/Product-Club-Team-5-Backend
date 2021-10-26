@@ -32,7 +32,7 @@ let controller = {
     readAll(request, response) {
         stateModel
         .find({})
-        .then(states => response.json(states))
+        .then(states => response.json(state))
         console.log("Added state info :-)")
     },
 
