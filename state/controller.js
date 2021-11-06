@@ -29,10 +29,12 @@ let controller = {
             console.log('is read by id')
     },
 
-    readAll(request, response) {
-        stateModel
-        .find({})
-        .then(states => response.json(state))
+   async readAll(request, response) {
+        const pageSize = 12;
+        const page = parseInt(request.query.page || "0");
+        await stateModel
+        .find({}).limit(pageSize).skip(pageSize * page)
+        .then(state => response.json({totalPages: state.length, state}))
         console.log("Added state info :-)")
     },
 
