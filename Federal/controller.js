@@ -1,5 +1,6 @@
 let federalModel = require("./model.js");
 
+
 let controller = {
     create(request, response) {
         let federal = request.body
@@ -17,10 +18,12 @@ let controller = {
             console.log('is able to read by id')
     },
 
-    readAll(request, response) {
-        federalModel
-            .find({})
-            .then(federal => response.json(federal))
+    async readAll(request, response)  {
+        const pageSize = 12;
+        const page = parseInt(request.query.page || "0");
+        await federalModel
+            .find({}).limit(pageSize).skip(pageSize * page)
+            .then(federal => response.json({totalPages: federal.length, federal}))
             console.log('is able to read all federal')
     },
 

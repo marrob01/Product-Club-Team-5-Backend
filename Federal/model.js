@@ -7,14 +7,14 @@ let federalSchema = new mongoose.Schema(
         Award_Id: String,
         Start_Date: Date,
         End_Date: Date,
-        Recipient_Name: String,
+        Recepient_Name: String,
         Country: String,
         City: String,
-        Federal_Covid_19_Obligations: Number,
+        Federal_Covid_19_Obligation: Number,
         Total_Award_Amount: Number,
         cfda_title: String,
         award_description: String,
-        awardType: String
+        Award_Type: String
     }
 
 )

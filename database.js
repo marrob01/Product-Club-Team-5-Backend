@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 } else {
   
-    connectionString = "mongodb://localhost/covidBudget";
+   connectionString = "mongodb://localhost/covidBudget";
    console.log("database connection checked");
     // console.log(process.env.DB_URL) // Please fix me- uncommit after deployment 
     
