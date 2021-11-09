@@ -24,7 +24,7 @@ let controller = {
         await federalModel
             .find({}).limit(pageSize).skip(pageSize * page)
             .then(federal => response.json({totalPages: federal.length, federal}))
-            console.log('is able to read all federal')
+            console.log('is able to read all federal', federal)
     },
 
     update(request, response) {

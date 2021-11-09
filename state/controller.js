@@ -34,7 +34,7 @@ let controller = {
         const page = parseInt(request.query.page || "0");
         await stateModel
         .find({}).limit(pageSize).skip(pageSize * page)
-        .then(state => response.json({totalPages: state.length, state}))
+        .then(states => response.json({totalPages: states.length, states}))
         console.log("Added state info :-)")
     },
 
