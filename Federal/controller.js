@@ -21,11 +21,15 @@ let controller = {
     async readAll(request, response)  {
         const pageSize = 12;
         const page = parseInt(request.query.page || "0");
+        const filterTitleQuery = (request.query.filterTitleQuery || {});
         await federalModel
-            .find({}).limit(pageSize).skip(pageSize * page)
+            .find(request.query).limit(pageSize).skip(page)
             .then(federal => response.json({totalPages: federal.length, federal}))
             console.log('is able to read all federal', federal)
     },
+
+
+    
 
     update(request, response) {
         let federal = JSON.parse(request.body)
