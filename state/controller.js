@@ -7,7 +7,7 @@ const router = express.Router();
 let controller = {
     create(request, response, err) {
         let state = request.body
-
+        
         if(response.status === 200 || 201){
             stateModel
                 .create(state)
@@ -30,13 +30,13 @@ let controller = {
     },
 
    async readAll(request, response) {
-        const pageSize = 20;
-        const page = parseInt(request.query.page || "0");
-        const totalPages = await stateModel.count(request.query)
+    const pageSize = 20;
+    const page = parseInt(request.query.page || "0");
+    const totalPages = await stateModel.count(request.query)
         await stateModel
         .find(request.query)
         .limit(pageSize).skip(pageSize * page)
-            .then(states => response.json({ totalPages: Math.ceil(totalPages / pageSize), states}))
+        .then(state => response.json({totalPages: Math.ceil(totalPages / pageSize), state}))
         console.log("Added state info :-)")
     },
 
