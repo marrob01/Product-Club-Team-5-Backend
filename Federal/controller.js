@@ -19,14 +19,26 @@ let controller = {
     },
 
     async readAll(request, response)  {
-        const pageSize = 12;
+        const pageSize = 20;
         const page = parseInt(request.query.page || "0");
-        const filterTitleQuery = (request.query.filterTitleQuery || {});
+        const totalPages = await federalModel.count(request.query)
         await federalModel
-            .find(request.query).limit(pageSize).skip(page)
-            .then(federal => response.json({totalPages: federal.length, federal}))
+            .find(request.query)
+            // .then(federal => 
+            //     {
+            //         console.log(federal.length)
+            //        return  response.json(Math.ceil(federal.length / pageSize))
+                    
+            //     }
+                
+            // )
+            .limit(pageSize).skip(pageSize * page)
+            .then(federal => response.json({totalPages: Math.ceil(totalPages / pageSize), federal}))
             console.log('is able to read all federal')
     },
+
+
+
 
 
     
