@@ -30,11 +30,13 @@ let controller = {
     },
 
    async readAll(request, response) {
-        const pageSize = 12;
+        const pageSize = 20;
         const page = parseInt(request.query.page || "0");
+        const totalPages = await stateModel.count(request.query)
         await stateModel
-        .find({}).limit(pageSize).skip(pageSize * page)
-        .then(states => response.json({totalPages: states.length, states}))
+        .find(request.query)
+        .limit(pageSize).skip(pageSize * page)
+            .then(states => response.json({ totalPages: Math.ceil(totalPages / pageSize), states}))
         console.log("Added state info :-)")
     },
 

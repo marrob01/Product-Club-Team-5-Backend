@@ -18,14 +18,13 @@ let controller = {
             console.log('is able to read by id')
     },
 
-    async readAll(request, response)  {
-        const pageSize = 12;
+    async readAll(request, response) {
+        const pageSize = 20;
         const page = parseInt(request.query.page || "0");
-        const filterTitleQuery = (request.query.filterTitleQuery || {});
         await federalModel
-            .find(request.query).limit(pageSize).skip(page)
-            .then(federal => response.json({totalPages: federal.length, federal}))
-            console.log('is able to read all federal', federal)
+            .find(request.query).skip(pageSize * page).limit(pageSize)
+            .then(federal => response.json({ totalPages: 328, federal }))
+        console.log('is able to read all federal')
     },
 
 
