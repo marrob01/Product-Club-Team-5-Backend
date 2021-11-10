@@ -1,5 +1,8 @@
+
+require("dotenv")
 let mongoose = require("mongoose");
 const db = mongoose.connection;
+
 
 
 
@@ -23,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
   
    connectionString = "mongodb://localhost/covidBudget";
    console.log("database connection checked");
-    // console.log(process.env.DB_URL) // Please fix me- uncommit after deployment 
+    console.log(process.env.DB_URL) // Please fix me- uncommit after deployment 
     
 } 
 

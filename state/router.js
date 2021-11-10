@@ -1,5 +1,6 @@
 let express = require("express");
 let router = new express.Router();
+require('serverless-http');
 
 let controller = require("./controller");
 
