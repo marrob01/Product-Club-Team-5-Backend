@@ -24,14 +24,6 @@ let controller = {
         const totalPages = await federalModel.count(request.query)
         await federalModel
             .find(request.query)
-            // .then(federal => 
-            //     {
-            //         console.log(federal.length)
-            //        return  response.json(Math.ceil(federal.length / pageSize))
-                    
-            //     }
-                
-            // )
             .limit(pageSize).skip(pageSize * page)
             .then(federal => response.json({totalPages: Math.ceil(totalPages / pageSize), federal}))
             console.log('is able to read all federal')
