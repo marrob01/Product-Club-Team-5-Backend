@@ -1,5 +1,8 @@
+
+require("dotenv")
 let mongoose = require("mongoose");
 const db = mongoose.connection;
+
 
 
 
